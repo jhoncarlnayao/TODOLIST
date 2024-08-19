@@ -35,6 +35,8 @@ document.getElementById('confirmtask-button').addEventListener('click', function
         <h1>${TASKTITLE}</h1>
         <p>${TASKDESCRIPTION}</p>
         <button id="todo">To do</button>
+        <button id="next">Next</button>
+        <button id="back">Back</button>
         <p id="current-date-task">${formattedDate}</p>
     `;
 
@@ -46,5 +48,39 @@ document.getElementById('confirmtask-button').addEventListener('click', function
 
 
     document.getElementById('addtask').style.display = 'none';
-});
 
+
+
+    NEWTASK.querySelector('#next').addEventListener('click', function () {
+        const statusButton = NEWTASK.querySelector('#todo');
+        const inProgress = NEWTASK.parentElement.classList.contains('inprogress-container-card');
+        const onApproval = NEWTASK.parentElement.classList.contains('onapproval-container-card');
+
+        if (inProgress) {
+            document.querySelector('.onapproval-container-card').appendChild(NEWTASK);
+            statusButton.textContent = 'Done'; 
+        } else if (onApproval) {
+            NEWTASK.remove(); 
+        } else {
+            document.querySelector('.inprogress-container-card').appendChild(NEWTASK);
+            statusButton.textContent = 'In Progress'; 
+        }
+    });
+
+    // Handle the "Back" button click
+    NEWTASK.querySelector('#back').addEventListener('click', function () {
+        const statusButton = NEWTASK.querySelector('#status-button');
+        const inProgress = NEWTASK.parentElement.classList.contains('inprogress-container-card');
+        const onApproval = NEWTASK.parentElement.classList.contains('onapproval-container-card');
+
+        if (onApproval) {
+            document.querySelector('.inprogress-container-card').appendChild(NEWTASK);
+            statusButton.textContent = 'In Progress';
+        } else if (inProgress) {
+            document.querySelector('.todo-card').appendChild(NEWTASK);
+            statusButton.textContent = 'To do'; 
+        }
+    });
+
+
+});

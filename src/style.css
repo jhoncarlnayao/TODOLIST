@@ -262,6 +262,15 @@ body{
     background-color: rgb(241, 240, 254);
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.100);
     margin-right: 40px;
+    
+   }
+
+   .inprogress-container-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
    }
 
    .inprogress-container h1{
@@ -291,6 +300,14 @@ body{
     position: relative;
     top: 20px;
     left: 30px;
+   }
+
+   .onapproval-container-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
    }
 
 
@@ -490,7 +507,7 @@ body{
 
     .cardtask-container{
         position: absolute;
-        top: 50%;
+        top: 200%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
@@ -500,6 +517,7 @@ body{
     }
 
     .cardtask {
+       
         width: 380px;
         height: 200px;
         background-color: rgb(255, 255, 255);
@@ -537,7 +555,7 @@ body{
         width: 330px;
     }
     
-    .cardtask button {
+    .cardtask #todo {
         font-family: "Inter";
         font-weight: 700;
         font-size: 15px;
@@ -550,6 +568,7 @@ body{
         position: absolute; 
         left: 30px;
         bottom: 50px; 
+        z-index: 9999;
     }
     
     .cardtask #current-date-task {
@@ -559,6 +578,49 @@ body{
         font-family: "Inter";
         font-weight: 500;
         color: #5d5d5d;
+    }
+
+    .cardtask #next {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 15px;
+        background-color: rgba(79, 255, 63, 0.171);
+        color: rgb(96, 255, 81);
+        width: 100px;
+        border: none;
+        border-radius: 20px;
+        height: 30px;
+        position: absolute; 
+        left: 300px;
+        bottom: 10px; 
+        transition: 0.5s;
+        z-index: 9999;
+    }
+    #next:hover{
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px  rgba(79, 255, 63, 0.171);
+    }
+
+    .cardtask #back {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 15px;
+        background-color: rgba(255, 63, 63, 0.171);
+        color: rgb(255, 81, 81);
+        width: 100px;
+        border: none;
+        border-radius: 20px;
+        height: 30px;
+        position: absolute; 
+        left: 180px;
+        bottom: 10px; 
+        transition: 0.5s;
+        z-index: 9999;
+    }
+
+    #back:hover{
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px  rgba(255, 63, 63, 0.171);
     }
     
 
