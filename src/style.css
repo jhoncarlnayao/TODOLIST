@@ -1,0 +1,567 @@
+body{
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.header-box{
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 400px);
+    height: 80px;
+    /* background-color: rgb(238, 244, 250); */
+    /* background: rgb(163, 162, 162); */
+    border-bottom: rgba(183, 183, 183, 0.190) 2px solid ;
+}
+
+#addtask-button{
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+}
+
+#addtask-button button{
+    z-index: 99;
+   cursor: pointer;
+    width: 150px;
+    padding: 10px;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(81, 81, 255, 0.171);
+    color: rgb(81, 81, 255);
+    transition: 0.5s;
+}
+
+#addtask-button button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(71, 71, 253, 0.46);
+}
+
+#addtask-button svg{
+    position: relative;
+    top: 4px;
+}
+
+.removetask-button svg{
+   position: relative;
+   top: 3px;
+}
+
+.removetask-button{
+    position: absolute;
+    top: 50%;
+    left: 81%;
+    transform: translate(-50%, -50%);
+}
+
+.removetask-button button{
+    cursor: pointer;
+    width: 170px;
+    padding: 10px;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color:rgba(236, 105, 105, 0.171);
+    color: #ec6969;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.removetask-button button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(253, 86, 86, 0.46);
+}
+
+.searchbar-container{
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+}
+
+.search-bar {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 20pc;
+   }
+   
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    outline: none;
+    background-color: aliceblue;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input::placeholder {
+    color: #6a6a6f;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: rgba(234,76,137,0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #6a6a6f;
+    width: 1rem;
+    height: 1rem;
+   }
+
+   .current-date-box{
+    width: calc(20%);
+    height: 120px;
+    border-radius: 30px;
+    background-color: rgb(217, 222, 230);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.100);
+    margin-right: 70px;
+   }
+
+   .current-date-box h1{
+    font-family: "Inter";
+    color: #494949;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+   }
+
+   .current-date-box h2{
+    font-family: "Inter";
+    color: #494949;
+    font-weight:800;
+    font-size: 30px;
+    position: relative;
+    top: 5%;
+    left: 30px;
+   }
+
+   .current-time-box{
+    width: calc(20%);
+    height: 120px;
+    border-radius: 30px;
+    background-color: rgb(217, 222, 230);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.100);
+    margin-right: 70px;
+   }
+
+   .current-time-box h1{
+    font-family: "Inter";
+    color: #494949;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+   }
+
+   .current-time-box h2{
+    font-family: "Inter";
+    color: #e82d2d;
+    font-weight:800;
+    font-size: 30px;
+    position: relative;
+    top: 5%;
+    left: 30px;
+   }
+   
+   .current-works-box{
+    width: calc(20%);
+    height: 120px;
+    border-radius: 30px;
+    background-color: rgb(217, 222, 230);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.100);
+   }
+
+   .current-works-box h1{
+    font-family: "Inter";
+    color: #494949;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+   }
+
+   .current-works-box h2{
+    font-family: "Inter";
+    color: #33c74e;
+    font-weight:800;
+    font-size: 30px;
+    position: relative;
+    top: 5%;
+    left: 30px;
+   }
+
+   .navbar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 120px;
+   }
+
+ 
+
+   .todo-container{
+    width: 500px;
+    height: 570px;
+    border-radius: 30px;
+    background-color: rgb(254, 248, 234);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.100);
+    margin-right:40px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+   }
+   
+   .todo-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+   }
+
+
+   .todo-container h1{
+    font-family: "Inter";
+    color: rgb(240, 216, 153);
+    font-weight: 700;
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+   
+   }
+
+   .inprogress-container{
+    width: 500px;
+    height: 35pc;
+    border-radius: 30px;
+    background-color: rgb(241, 240, 254);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.100);
+    margin-right: 40px;
+   }
+
+   .inprogress-container h1{
+    font-family: "Inter";
+    color:rgb(110, 109, 193);
+    font-weight: 700;
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+   }
+
+   .onapproval-container{
+    width:500px;
+    height: 35pc;
+    border-radius: 30px;
+    background-color:rgb(231, 254, 236);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.100);
+    margin-right: 40px;
+   }
+
+   .onapproval-container h1{
+    font-family: "Inter";
+    color: rgb(121, 212, 138);
+    font-weight: 700;
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+   }
+
+
+   .body-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 170px;
+    left: 20px;
+   }
+
+   @keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+   @keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+
+   #container-addtask{
+    position: absolute;
+    top: -10pc;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+   }
+
+   #addtask{
+    display: none;
+    position: relative;
+    z-index:2;
+    width: 500px;
+    height: 420px;
+    border-radius: 20px;
+    background-color: #f2f2f3;
+    box-shadow: 0px 0px 50px 5000px rgba(0, 0, 0, 0.271);
+    animation: slideDown 0.5s;
+    transition: 0.3s;
+   }
+
+   
+.add-title {
+    border: 2px solid transparent;
+    width: 300px;
+    height: 3.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 5px 0.1px rgba(54, 55, 55, 0.213);
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  
+  .add-title:hover,
+  .add-title:focus {
+    border: 2px solid #4a9dec;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+
+  .add-title::placeholder{
+    font-family: "Inter";
+    font-size: 15px;
+  }
+
+
+  
+
+     
+.description {
+    border: 2px solid transparent;
+    width: 300px;
+    height: 200px;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    transition: all 0.5s;
+    overflow: auto;
+    box-shadow: 0px 0px 5px 0.1px rgba(54, 55, 55, 0.213);
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .description:hover,
+  .description:focus {
+    border: 2px solid #4a9dec;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+
+  .description::placeholder{
+    font-family: "Inter";
+    font-size: 15px;
+  }
+
+
+
+  .container-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30px;
+  }
+  
+   
+#confirmtask-button{
+    position: absolute;
+    top: 115%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+}
+
+#confirmtask-button button{
+    z-index: 99;
+   cursor: pointer;
+    width: 150px;
+    padding: 10px;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(81, 81, 255, 0.171);
+    color: rgb(81, 81, 255);
+    transition: 0.5s;
+}
+
+#confirmtask-button button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(71, 71, 253, 0.46);
+}
+
+#confirmtask-button svg{
+    position: relative;
+    top: 4px;
+}
+
+
+#canceltask-button svg{
+    position: relative;
+    top: 4px;
+ }
+ 
+ #canceltask-button{
+    position: absolute;
+    top: 115%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+ }
+ 
+ #canceltask-button button{
+     cursor: pointer;
+     width: 150px;
+    padding: 10px;
+     font-family: "Inter";
+     font-weight: 700;
+     font-size: 15px;
+     border-radius: 20px;
+     border: none;
+     background-color:rgba(236, 105, 105, 0.171);
+     color: #ec6969;
+     transition: 0.5s;
+     transform-origin: center;
+ }
+ 
+ #canceltask-button button:hover{
+     transform: scale(1.1);
+     box-shadow: 0 6px 30px rgba(253, 86, 86, 0.46);
+ }
+
+    .cardtask-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cardtask {
+        width: 380px;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: #0d0c2235 5px 1px 20px;
+        border-radius: 10px;
+        padding: 20px;
+        position: relative; 
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .cardtask h1 {
+        font-family: "Inter";
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: -1px;
+        color: #48484a;
+        position: absolute; 
+        top: 5px;
+        left: 30px;
+       
+    }
+    
+    .cardtask p {
+        font-family: "Inter";
+        font-size: 13px;
+        font-weight: 500;
+        font-style: normal;
+        color: #48484a;
+        position: absolute; 
+        left: 30px;
+        top: 45px;
+        text-wrap: pretty;
+        width: 330px;
+    }
+    
+    .cardtask button {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 15px;
+        background-color: rgba(81, 81, 255, 0.171);
+        color: rgb(81, 81, 255);
+        width: 100px;
+        border: none;
+        border-radius: 20px;
+        height: 30px;
+        position: absolute; 
+        left: 30px;
+        bottom: 50px; 
+    }
+    
+    .cardtask #current-date-task {
+        position: absolute; 
+       top: 190px;
+        left: 30px;
+        font-family: "Inter";
+        font-weight: 500;
+        color: #5d5d5d;
+    }
+    
+
+
+
+
